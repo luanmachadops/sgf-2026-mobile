@@ -15,9 +15,10 @@ export function Layout() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <div>
-          <p className="eyebrow">SGF Motorista</p>
+        <div className="app-header__copy">
+          <p className="eyebrow">SGF 2026</p>
           <h1>{driver?.name ?? 'Motorista'}</h1>
+          <p className="muted">App do motorista • Matricula {driver?.registration_number ?? '-'}</p>
         </div>
         <button type="button" className="icon-button" onClick={handleLogout} aria-label="Sair">
           <LogOut size={18} />
